@@ -25,3 +25,12 @@ Pour supprimer le container, nous allons utiliser cette commande :
 docker container rm devops-training-docker
 ```
 
+## 3 - e
+Pour faire la même chose que sur le 3 - d sans l'option -v et en utilisant la commande cp, nous allons utiliser ces commandes :  
+```
+docker run --name devops-training-docker -p 80:80 nginx
+```
+puis
+```
+docker cp /Users/dalyll/Documents/dev/devops-training-docker/html devops-training-docker:/usr/share/nginx/
+```
