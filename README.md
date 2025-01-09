@@ -4,7 +4,7 @@ TP - Dalyll REGUIA
 ## 3 - a 
 Pour récupérer l'image de nginx sur le docker hub on va faire :
 ```
-docker image pull nginx
+docker pull nginx
 ```
 
 ## 3 - b 
