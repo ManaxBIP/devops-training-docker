@@ -14,8 +14,14 @@ docker images
 ```
 
 ## 3 - d
-Pour créer un container qui va rendre notre page html créé auparavant nous allons utiliser cette commande :  
+Pour créer un container qui va rendre notre page html créé auparavant, nous allons utiliser cette commande :  
 ```
 docker run --name devops-training-docker -p 80:80 -v /Users/dalyll/Documents/dev/devops-training-docker/html:/usr/share/nginx/html nginx
+```
+
+## 3 - e
+Pour supprimer le container, nous allons utiliser cette commande :  
+```
+docker container rm devops-training-docker
 ```
 
