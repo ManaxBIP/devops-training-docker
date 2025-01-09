@@ -30,7 +30,33 @@ Pour faire la même chose que sur le 3 - d sans l'option -v et en utilisant la c
 ```
 docker run --name devops-training-docker -p 80:80 nginx
 ```
-puis
+
+## 4 - a
+Pour créer l'image avec le Dockerfile, nous allons utiliser cette commande en étant dans le répertoire du projet :  
 ```
-docker cp /Users/dalyll/Documents/dev/devops-training-docker/html devops-training-docker:/usr/share/nginx/
+docker build -t custom-nginx-image .
 ```
+
+## 4 - b
+Pour exécuter cette nouvelle image, nous allons utiliser cette commande : 
+```
+docker run --name custom-nginx-container -p 80:80 custom-nginx-image
+```
+
+## 4 - c
+Montage de volume :
+
+Avantages :
+Pratique pour le développement, car les modifications locales sont immédiatement visibles dans le conteneur.
+Pas besoin de reconstruire une image à chaque changement.
+Inconvénients :
+Moins portable.
+
+COPY dans une image :
+
+Avantages :
+Conteneur autonome et portable.
+Pas de dépendance au système de fichiers de l'hôte.
+Inconvénients :
+Reconstruction nécessaire à chaque modification des fichiers.
+Moins pratique pour les itérations rapides en développement.
