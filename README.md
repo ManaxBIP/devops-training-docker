@@ -30,6 +30,10 @@ Pour faire la même chose que sur le 3 - d sans l'option -v et en utilisant la c
 ```
 docker run --name devops-training-docker -p 80:80 nginx
 ```
+puis
+```
+docker cp /Users/dalyll/Documents/dev/devops-training-docker/html devops-training-docker:/usr/share/nginx/
+```
 
 ## 4 - a
 Pour créer l'image avec le Dockerfile, nous allons utiliser cette commande en étant dans le répertoire du projet :  
